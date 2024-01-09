@@ -1,0 +1,173 @@
+/* 
+Fuentes:
+font-family: 'Questrial', sans-serif;
+font-family: 'Qwitcher Grypen', cursive;
+font-family: 'Ysabeau Office', sans-serif; 
+
+Colores:
+Fucsia: #FF5BDE (el color en las historias y el letrero "Girls Places" del local)
+Gris: #90A6BB (apróx., basado en el frente del local)
+Rosa: #DD929C (apróx., basado en el interior del local)
+Blanco (junto al gris y el rosa que predominan en el local)
+Negro (hay cartelería en negro, en vidriera, no es predominante)
+*/
+
+:root{
+    --fucsia: #FF5BDE;
+    --gris: #90A6BB;
+    --rosa: #DD929C;
+    --fuente_texto: 'Questrial', sans-serif;
+    --fuente_titulos: 'Ysabeau Office', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente_texto);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: '. . h h . .'
+                         '. . h h . .'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'm m m m m m'
+                         'f f f f f f';
+    width: 100%;
+    padding: 2%;
+}
+
+.header{
+    grid-area: h;
+    border-bottom-width: 1%;
+    border-bottom-color: var(--fucsia);
+    border-bottom-style: solid;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.2fr;
+    justify-items: center;
+}
+
+.menu{
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-items: center;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu li a{
+    font-family: var(--fuente_titulos); 
+    font-weight: 700;
+    font-size: 120%;
+    color: var(--fucsia);
+    text-decoration: none;
+}
+
+.menu li a:visited{
+    color: var(--fucsia);
+}
+
+.menu li a:hover{
+    text-shadow: 0px 5px 10px var(--fucsia), 0px -5px 10px var(--fucsia);
+    border-radius: 5%;
+}
+
+.footer{
+    grid-area: f;
+    border-top-width: 1%;
+    border-top-color: var(--fucsia);
+    border-top-style: solid;
+    text-align: center;
+}
+
+
+/* ================================= INICIO =================================*/
+.inicio{
+    grid-area: m;
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1%;
+    grid-template-areas: 'slide slide slide slide slide slide'
+                         'slide slide slide slide slide slide'
+                         'slide slide slide slide slide slide'
+                         'intro intro intro intro intro intro'
+                         'intro intro intro intro intro intro'
+                         'intro intro intro intro intro intro'
+                         'intro intro intro intro intro intro'
+                         'intro intro intro intro intro intro'
+                         'test test test test test test'
+                         'test test test test test test'
+                         'test test test test test test'
+                         'test test test test test test';
+}
+
+.slides{
+    grid-area: slide;
+    display: flex;
+    justify-content: center;
+}
+
+.slide{
+    box-shadow: 5px 5px 10px var(--gris);
+}
+
+
+.introduccion{
+    background-color: var(--fucsia);
+    opacity: 0.9;
+    margin-left: -10%;
+    margin-right: -10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    font-size: large;
+    grid-area: intro;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.testimonios{
+    grid-area: test;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.testimonio{
+    margin: 5%;
+    padding: 5%;
+    /* text-align: center; */
+}
+
+.testimonio span{
+    display: block;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.testimonio p{
+    margin-top: 3%;
+    text-align: left;
+    color: var(--fucsia);
+}
+
