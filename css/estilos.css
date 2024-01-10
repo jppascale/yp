@@ -31,8 +31,8 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    grid-template-areas: '. . h h . .'
-                         '. . h h . .'
+    grid-template-areas: '. h h h h .'
+                         '. h h h h .'
                          'm m m m m m'
                          'm m m m m m'
                          'm m m m m m'
@@ -123,10 +123,14 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     grid-area: slide;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .slide{
     box-shadow: 5px 5px 10px var(--gris);
+    max-width: 95%;
+    height: auto;
+    max-height: 200px;
 }
 
 
@@ -135,7 +139,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     opacity: 0.9;
     margin-left: -10%;
     margin-right: -10%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     margin-bottom: 5%;
     color: white;
     font-size: large;
@@ -156,6 +160,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 .testimonio{
     margin: 5%;
     padding: 5%;
+    font-size: small;
     /* text-align: center; */
 }
 

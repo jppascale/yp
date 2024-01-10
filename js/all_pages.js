@@ -24,4 +24,4 @@ const headerElement = document.querySelector('.header')
 headerElement.innerHTML = headerHTML
 
 const footerElement = document.querySelector('.footer')
-footerElement.innerHTML(footerHTML)
+footerElement.innerHTML = footerHTML

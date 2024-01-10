@@ -8,7 +8,6 @@ slides.forEach(element => {
     });
 slides.item(slideIndex).style.display = 'block'
 const cantSlides = slides.length
-console.log("entró")
 
 
 function loopSlide(){
