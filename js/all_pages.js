@@ -1,4 +1,4 @@
-const headHTML = `<meta charset="UTF-8">
+const headHTML = /*HTML*/`<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -6,11 +6,11 @@ const headHTML = `<meta charset="UTF-8">
 <link rel="shortcut icon" href="./media/img/Logo-150.png" type="image/x-icon">
 `
 
-const headerHTML = `<img src="./media/img/Logo-150.png" alt="Logo YP Indumentaria" class="logo">
+const headerHTML = /*HTML*/`<img src="./media/img/Logo-150.png" alt="Logo YP Indumentaria" class="logo">
 <nav>
     <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Productos</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./productos.html">Productos</a></li>
     </ul>
 </nav>
 `
