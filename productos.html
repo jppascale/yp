@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- <title>Productos</title> -->
+</head>
+<body>
+    <header class="header">
+    </header>
+
+    <main class="productosApp" id="productosApp">
+        <nav class="filtros">
+            <button @click.prevent="visualizarFiltro" class="btnBuscar">Buscar</button>
+            <form v-show="mostrarFiltro" class="animate__animated animate__fadeIn">
+                <input type="text" name="texto" id="texto">
+                <button type="submit">Buscar</button>
+            </form>
+        </nav>
+        <div class="productos">
+            <div class="producto" v-for="producto in productos.slice(pagProductoDesde, pagProductoHasta)">
+                <img v-bind:src="dirImagenes + producto.img_url" v-bind:alt="producto.img_alt">
+                <h4>{{producto.descripcion}}</h4>
+                <p>{{producto.precio}}</p>
+            </div>
+        </div>
+        <nav class="paginacion">
+            <a href.prevent="#" @click.prevent="paginaAnterior" v-show="!pagPrimeraPagina">&lt;&lt;</a>
+            <a href.prevent="#" @click.prevent="paginaSiguiente" v-show="!pagUltimaPagina">&gt;&gt;</a>
+        </nav>
+    </main>
+
+
+    <footer class="footer">
+    </footer>
+    <script src="./js/all_pages.js"></script>    
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./js/productos.js"></script>
+</body>
+</html>

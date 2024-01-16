@@ -3,6 +3,7 @@ const headHTML = `<meta charset="UTF-8">
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="shortcut icon" href="./media/img/Logo-150.png" type="image/x-icon">
 `
 
 const headerHTML = `<img src="./media/img/Logo-150.png" alt="Logo YP Indumentaria" class="logo">

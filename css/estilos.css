@@ -14,7 +14,8 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 
 :root{
     --fucsia: #FF5BDE;
-    --gris: #90A6BB;
+    /* --gris: #90A6BB; */
+    --gris:#8F838F;
     --rosa: #DD929C;
     --fuente_texto: 'Questrial', sans-serif;
     --fuente_titulos: 'Ysabeau Office', sans-serif;
@@ -176,3 +177,68 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     color: var(--fucsia);
 }
 
+/* ================================= PRODUCTOS ================================= */
+.filtros{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+}
+
+.filtros form{
+ background-color: var(--gris);
+ opacity: 6;
+ padding: 5%;
+}
+
+.btnBuscar{
+    border-style: none;
+    background-color: var(--fucsia);
+    padding: 2%;
+    font-family: var(--fuente_titulos);
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 2%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    justify-content: space-around;
+
+    /* width: 95%; */
+    /* margin-left: 2%; */
+
+}
+
+.producto{
+    width: 45%;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 2%;
+    padding: 2%;
+    box-shadow: 5px 5px 10px var(--gris);
+    position: relative;
+}
+
+.producto img{
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.producto p{
+    color: var(--gris);
+    line-height: 150%;
+}
+
+.paginacion{
+    color: var(--fucsia);
+    text-align: center; 
+    margin: 2%;
+}
+
+.paginacion a{
+    margin: 5%;
+}
