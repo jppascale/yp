@@ -17,4 +17,4 @@ function loopSlide(){
     slides.item(slideIndex).style.display = 'block'
 }
 
-setInterval(loopSlide, 10000)
+setInterval(loopSlide, 5000)

@@ -149,20 +149,44 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     align-items: center;
     padding-left: 20%;
     padding-right: 20%;
+    justify-content: center;
+}
+
+.introduccion p{
+    max-width: 1000px;
+}
+
+.introduccion img{
+    align-self: end;
+}
+
+.testimonio_area{
+    display: grid;
+    grid-area: test;
+    max-width: 1000px;
+    justify-self: center;
+
+    grid-template-columns: 20% 80%;
+}
+
+.testimonio_area img{
+    /* height: 90%; */
 }
 
 .testimonios{
-    grid-area: test;
+    /* grid-area: test; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
+    align-self: center;
 }
 
 .testimonio{
     margin: 5%;
     padding: 5%;
     font-size: small;
-    /* text-align: center; */
+    max-width: 300px;
 }
 
 .testimonio span{
@@ -176,6 +200,19 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     text-align: left;
     color: var(--fucsia);
 }
+
+@media screen and (max-width: 450px) {
+    .introduccion img{
+        display: none;
+    }
+    .testimonio_area{
+        grid-template-columns: 100%;
+    }
+    .testimonio_area img{
+        display: none;
+    }
+}
+
 
 /* ================================= PRODUCTOS ================================= */
 .filtros{
