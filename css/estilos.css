@@ -169,10 +169,6 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     grid-template-columns: 20% 80%;
 }
 
-.testimonio_area img{
-    /* height: 90%; */
-}
-
 .testimonios{
     /* grid-area: test; */
     display: grid;
@@ -201,7 +197,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     color: var(--fucsia);
 }
 
-@media screen and (max-width: 450px) {
+@media all and (max-width: 450px) {
     .introduccion img{
         display: none;
     }
@@ -215,6 +211,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 
 
 /* ================================= PRODUCTOS ================================= */
+
 .filtros{
     margin-top: 2%;
     display: flex;
@@ -228,11 +225,14 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
  padding: 5%;
 }
 
-.btnBuscar{
+.btnFiltrar{
     border-style: none;
+    color: white;
+    font-weight: 700;
     background-color: var(--fucsia);
     padding: 2%;
     font-family: var(--fuente_titulos);
+    cursor: pointer;
 }
 
 .productos{
@@ -242,11 +242,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     gap: 2%;
     padding-bottom: 5%;
     padding-top: 5%;
-    justify-content: space-around;
-
-    /* width: 95%; */
-    /* margin-left: 2%; */
-
+    justify-content: center;
 }
 
 .producto{
@@ -278,4 +274,13 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 
 .paginacion a{
     margin: 5%;
+    cursor: pointer;
+}
+
+@media all and (min-width: 1000px){ 
+    .productosApp{
+        max-width: 1000px;
+        margin: auto;
+    }
+    
 }

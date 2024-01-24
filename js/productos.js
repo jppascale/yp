@@ -6,7 +6,7 @@ const productosApp = Vue.createApp({
             productos: [],
             dirImagenes: './media/catalogo/',
             pagTotalProductos: 0,
-            pagCantProductos: 6,
+            pagCantProductos: 8,
             pagProductoDesde: 0,
             pagProductoHasta: 0,
             pagUltimaPagina: false,
