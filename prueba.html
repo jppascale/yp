@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function prueba(){
+            r = await fetch('http://localhost:5000/productos')
+            if (r.ok){
+                return  await r.json()
+        
+            }
+        }
+
+        const body = document.querySelector('body')
+        const jsonprueba = prueba()
+        console.log(jsonprueba);
+        body.innerHTML = jsonprueba
+
+    </script>
+</body>
+</html>

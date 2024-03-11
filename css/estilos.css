@@ -222,7 +222,7 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 .filtros form{
  background-color: var(--gris);
  opacity: 6;
- padding: 5%;
+ padding: 2%;
 }
 
 .btnFiltrar{
@@ -234,6 +234,76 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
     font-family: var(--fuente_titulos);
     cursor: pointer;
 }
+
+.filtros form div{
+    margin: 2%;
+}
+
+.filtroTexto{
+    display: flex;
+    gap: 1%;    
+}
+
+.filtroTexto input[type='text']{
+    border-style: none;
+    border-radius: 2px;
+    width: 90%;
+    color: var(--gris);
+}
+
+.filtroTexto button{
+    padding: 5px;
+    border-radius: 2px;
+    /* background-color: var(--gris); */
+    /* color: white; */
+    /* border-color: white; */
+    border-style: none;
+    /* border-width: 5px; */
+}
+
+.filtroColor, .filtroTalle, .filtroCategoria{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.filtroColor input[type="radio"], .filtroTalle input[type="radio"], .filtroCategoria input[type="radio"]{
+    display: none;
+}
+
+.labelColor{
+    width: 40px;
+    height: 40px;
+    list-style: none; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.labelColorTodos{
+    border-width: 1px;
+    border-style: solid;
+}
+
+.labelColor:hover, .labelTalle:hover, .labelCategoria:hover, .filtroActivo{
+    box-shadow: 0px 5px 10px var(--fucsia), 0px -5px 10px var(--fucsia);
+} 
+
+.labelTalle, .labelCategoria{
+    background-color: var(--fucsia);
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0.5%;
+    font-size: small;
+    cursor: pointer;
+}
+
+.labelTalle:hover, .labelCategoria:hover, .filtroActivo{
+    opacity: 1;
+    color: white;
+}
+
 
 .productos{
     display: flex;
@@ -275,6 +345,93 @@ Negro (hay cartelería en negro, en vidriera, no es predominante)
 .paginacion a{
     margin: 5%;
     cursor: pointer;
+}
+
+.detalleProducto{
+    display: grid;
+    grid-column: repeat(5, 1fr);
+    grid-row: 5% 5% 80% 10%;
+    grid-template-areas: 'cat cat cat cat cat'
+                         'art art art art art'
+                         'img img desc desc desc'
+                         'but but but but but';
+    position: fixed;
+    row-gap: 2%;
+    column-gap: 1%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: var(--fucsia);
+    border-style: solid;
+    border-radius: 5px;
+    width: 90%;
+    /* max-height: 80%; */
+    max-width: 700px;
+    overflow-y: auto;
+    scrollbar-width: 50px;
+    padding: 2%;
+    z-index: 11;
+}
+
+.detalleProducto img{
+    grid-area: img;
+    width: auto;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.dcat{
+    grid-area: cat;
+}
+
+.dprod{
+    grid-area: art;
+}
+
+.dimg{
+    grid-area: img;
+    justify-self: center;
+}
+
+.dtext{
+    grid-area: desc;
+}
+
+.dbutton{
+    grid-area: but;
+    /* max-width: 20%; */
+    justify-self: center;
+    background-color: var(--fucsia);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;   
+}
+
+.detalleProductoVisible{
+    overflow: hidden;
+}
+
+.bloqueadorFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+@media all and (max-width: 599px) {
+    .detalleProducto{
+        grid-row: 5% 5% 55% 30% 5%;
+        grid-template-areas: 'cat cat cat cat cat'
+                             'art art art art art'
+                            'img img img img img'
+                            'desc desc desc desc desc'
+                            '. . but . .';
+    }    
+
 }
 
 @media all and (min-width: 1000px){ 

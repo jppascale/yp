@@ -6,7 +6,7 @@ const headHTML = /*HTML*/`<meta charset="UTF-8">
 <link rel="shortcut icon" href="./media/img/Logo-150.png" type="image/x-icon">
 `
 
-const headerHTML = /*HTML*/`<img src="./media/img/Logo-150.png" alt="Logo YP Indumentaria" class="logo">
+const headerHTML = /*HTML*/`<img src="./media/img/Logo-150_2.png" alt="Logo YP Indumentaria" class="logo">
 <nav>
     <ul class="menu">
         <li><a href="./index.html">Home</a></li>
