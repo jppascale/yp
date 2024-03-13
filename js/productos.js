@@ -1,4 +1,4 @@
-const url_YP = 'jotapy79.pythonanywhere.com'
+const url_YP = 'https://jotapy79.pythonanywhere.com'
 
 const productosApp = Vue.createApp({
     data(){
