@@ -1,5 +1,5 @@
 // const url_YP = 'http://localhost:5000'
-const url_YP = 'https://jotapy79.pythonanywhere.com' 
+const url_YP = 'https://jotapy79.pythonanywhere.com'  
 
 const productosApp = Vue.createApp({
     data(){
